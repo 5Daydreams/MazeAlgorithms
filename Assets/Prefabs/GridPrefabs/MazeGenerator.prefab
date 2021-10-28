@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7867000424502710016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7867000424502710018}
+  - component: {fileID: 7867000424502710019}
+  - component: {fileID: 2349633701594825146}
+  - component: {fileID: 6419145055043860328}
+  - component: {fileID: 6624497337190038775}
+  - component: {fileID: 8123257027076574051}
+  m_Layer: 0
+  m_Name: MazeGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7867000424502710018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867000424502710016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7867000424502710019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867000424502710016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045929c0faf924a4784dff7f6d1c06a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gridWidth: 10
+  _gridHeight: 6
+  _cellScaleSize: {fileID: 11400000, guid: eb7b3ac59f1a6c7439ff49854142c325, type: 2}
+  _pathWidth: 6
+  _cellPrefab: {fileID: 6450053184028985551, guid: 882fe86943d1a7e479e13175720c0841,
+    type: 3}
+  _playerPrefab: {fileID: 3289557630603956683, guid: 78552b89fcc1d4744a6b8fa6c619aac0,
+    type: 3}
+  _exitPrefab: {fileID: 5670319293545540782, guid: 54be84054e004a84bb6428f65cfb5e46,
+    type: 3}
+  _onStart: {fileID: 11400000, guid: 975b5fa38b3e806478f5d349e54f68e5, type: 2}
+--- !u!114 &2349633701594825146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867000424502710016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b410775016764ffbaceb8da3847867da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 542b690159c98f14ab17853ca78d2534, type: 2}
+  UnityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7867000424502710019}
+        m_TargetAssemblyTypeName: _Code.MazeGenerator.MazeGenerator, Scripts
+        m_MethodName: NewMaze
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 0e6e9708eb74aa444a99ff9e3fe4a6f0, type: 2}
+        m_TargetAssemblyTypeName: _Code.Toolbox.SimpleValues.SimpleValue`1[[System.Boolean,
+          mscorlib
+        m_MethodName: SetValue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &6419145055043860328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867000424502710016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05893122f5d92f46b503eab4623d203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _generator: {fileID: 7867000424502710019}
+  _difficultyHolder: {fileID: 11400000, guid: 83fbf10a841d2b6489629635bbe433ef, type: 2}
+--- !u!114 &6624497337190038775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867000424502710016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b410775016764ffbaceb8da3847867da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: be410637048080544aa929a6ef8c64d3, type: 2}
+  UnityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6419145055043860328}
+        m_TargetAssemblyTypeName: SetTimeAttackMazeDimensions, Scripts
+        m_MethodName: SetMazeDimensions
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 542b690159c98f14ab17853ca78d2534, type: 2}
+        m_TargetAssemblyTypeName: VoidEvent, Scripts
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8123257027076574051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7867000424502710016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f6775ff4723b24b9ce1f26179432ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _awake: {fileID: 0}
+  _onEnable: {fileID: 0}
+  _reset: {fileID: 0}
+  _start: {fileID: 11400000, guid: be410637048080544aa929a6ef8c64d3, type: 2}
+  _onDisable: {fileID: 0}
+  _onDestroy: {fileID: 0}

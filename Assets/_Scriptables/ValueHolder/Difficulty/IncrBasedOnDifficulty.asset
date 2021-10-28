@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7650ccab72485c4387f3ed8e68b23f1, type: 3}
+  m_Name: IncrBasedOnDifficulty
+  m_EditorClassIdentifier: 
+  _difficultyHolder: {fileID: 11400000, guid: 83fbf10a841d2b6489629635bbe433ef, type: 2}
+  _remainingTimeScriptable: {fileID: 11400000, guid: f06602b4b2f435243975fa761c69faac,
+    type: 2}
